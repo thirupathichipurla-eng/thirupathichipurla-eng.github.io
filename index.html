@@ -48,7 +48,7 @@
     }
 
     .hero {
-      max-width: 900px;
+      max-width: 950px;
     }
 
     .profile {
@@ -62,7 +62,7 @@
     }
 
     h1 {
-      font-size: 48px;
+      font-size: 52px;
       color: white;
       margin: 10px 0;
     }
@@ -81,29 +81,17 @@
     .typing-text {
       font-size: 24px;
       color: #cbd5e1;
-      overflow: hidden;
       border-right: 3px solid #38bdf8;
-      white-space: nowrap;
+      white-space: normal;
+      width: 100%;
       margin: auto;
-      width: 0;
-      animation:
-        typing 5s steps(60, end) forwards,
-        blink 0.8s infinite;
-    }
-
-    @keyframes typing {
-      from {
-        width: 0
-      }
-
-      to {
-        width: 100%
-      }
+      padding-right: 5px;
+      animation: blink 0.8s infinite;
     }
 
     @keyframes blink {
       50% {
-        border-color: transparent
+        border-color: transparent;
       }
     }
 
@@ -145,7 +133,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 24px;
     }
 
@@ -160,6 +148,7 @@
     .project-card:hover {
       transform: translateY(-6px);
       border-color: #38bdf8;
+      box-shadow: 0 0 20px rgba(56,189,248,0.15);
     }
 
     .project-card img {
@@ -212,11 +201,8 @@
       }
 
       .typing-text {
-        font-size: 16px;
-        white-space: normal;
+        font-size: 18px;
         border-right: none;
-        width: 100%;
-        animation: none;
       }
 
       nav a {
