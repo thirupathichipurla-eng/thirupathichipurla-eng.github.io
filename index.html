@@ -6,6 +6,7 @@
   <title>Thirupathi Reddy Chipurla | Energy Engineer</title>
 
   <style>
+
     * {
       box-sizing: border-box;
       scroll-behavior: smooth;
@@ -77,9 +78,33 @@
       margin-top: 0;
     }
 
-    .tagline {
-      font-size: 22px;
+    .typing-text {
+      font-size: 24px;
       color: #cbd5e1;
+      overflow: hidden;
+      border-right: 3px solid #38bdf8;
+      white-space: nowrap;
+      margin: auto;
+      width: 0;
+      animation:
+        typing 5s steps(60, end) forwards,
+        blink 0.8s infinite;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0
+      }
+
+      to {
+        width: 100%
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent
+      }
     }
 
     .buttons {
@@ -137,6 +162,12 @@
       border-color: #38bdf8;
     }
 
+    .project-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
     .project-card a {
       color: #38bdf8;
       font-weight: bold;
@@ -175,19 +206,26 @@
     }
 
     @media (max-width: 700px) {
+
       h1 {
         font-size: 34px;
       }
 
-      .tagline {
-        font-size: 18px;
+      .typing-text {
+        font-size: 16px;
+        white-space: normal;
+        border-right: none;
+        width: 100%;
+        animation: none;
       }
 
       nav a {
         display: inline-block;
         margin: 6px;
       }
+
     }
+
   </style>
 </head>
 
@@ -202,27 +240,48 @@
 </nav>
 
 <header id="home">
+
   <div class="hero">
-    <img src="Passbild.JPG" alt="Thirupathi Reddy Chipurla" class="profile">
+
+    <img src="Passbild.JPG"
+    alt="Thirupathi Reddy Chipurla"
+    class="profile">
 
     <h1>Thirupathi Reddy Chipurla</h1>
 
-    <p class="tagline">
+    <h3 class="typing-text">
       Renewable Energy Engineer | Energy Systems & PV Specialist | Industrial Energy Optimization
-    </p>
+    </h3>
 
     <div class="buttons">
-      <a href="Thirupathi_Reddy_Chipurla_CV.pdf" target="_blank">Download CV</a>
-      <a href="https://github.com/thirupathichipurla-eng" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/thirupathireddychipurla/" target="_blank">LinkedIn</a>
+
+      <a href="Thirupathi_Reddy_Chipurla_CV.pdf"
+      target="_blank">
+      Download CV
+      </a>
+
+      <a href="https://github.com/thirupathichipurla-eng"
+      target="_blank">
+      GitHub
+      </a>
+
+      <a href="https://www.linkedin.com/in/thirupathireddychipurla/"
+      target="_blank">
+      LinkedIn
+      </a>
+
     </div>
+
   </div>
+
 </header>
 
 <section id="about">
+
   <h2>About Me</h2>
 
   <div class="card">
+
     <p>
       I am a Renewable Energy Engineer with a Master of Engineering in International Energy Engineering
       from OTH Amberg-Weiden, Germany, and a background in Mechanical Engineering.
@@ -237,13 +296,17 @@
       I am currently building a professional engineering portfolio focused on practical energy system
       projects, industrial decarbonization, and data-supported sustainability solutions.
     </p>
+
   </div>
+
 </section>
 
 <section>
+
   <h2>Engineering Highlights</h2>
 
   <div class="grid">
+
     <div class="metric">
       <strong>96.5%</strong>
       System efficiency improvement analysis
@@ -263,74 +326,81 @@
       <strong>B1</strong>
       German language level
     </div>
+
   </div>
+
 </section>
 
 <section id="projects">
+
   <h2>Featured Projects</h2>
 
   <div class="grid">
 
-   <div class="project-card">
+    <div class="project-card">
 
-  <img src="transformer-efficiency.png"
-  style="width:100%; border-radius:12px; margin-bottom:15px;">
+      <img src="transformer-efficiency.png">
 
-  <h3>⚡ Industrial Energy Loss Optimization</h3>
+      <h3>⚡ Industrial Energy Loss Optimization</h3>
 
-  <p>
-    Power loss analysis and optimization of electrical heating systems in the glass industry,
-    including transformer efficiency, cable losses, magnetic induction, and cost optimization.
-  </p>
+      <p>
+        Power loss analysis and optimization of electrical heating systems in the glass industry,
+        including transformer efficiency, cable losses, magnetic induction, and cost optimization.
+      </p>
 
-  <a href="https://github.com/thirupathichipurla-eng/industrial-energy-loss-optimization" target="_blank">
-    View Project →
-  </a>
+      <a href="https://github.com/thirupathichipurla-eng/industrial-energy-loss-optimization"
+      target="_blank">
+      View Project →
+      </a>
 
-</div>
+    </div>
 
-<div class="project-card">
+    <div class="project-card">
 
-  <img src="pv-installation.png"
-  style="width:100%; border-radius:12px; margin-bottom:15px;">
+      <img src="pv-installation.png">
 
-  <h3>☀ Utility-Scale PV Economic Analysis</h3>
+      <h3>☀ Utility-Scale PV Economic Analysis</h3>
 
-  <p>
-    Photovoltaic system simulation, annual energy yield analysis, NPV/IRR/payback evaluation,
-    and sustainability assessment using Polysun and Excel.
-  </p>
+      <p>
+        Photovoltaic system simulation, annual energy yield analysis, NPV/IRR/payback evaluation,
+        and sustainability assessment using Polysun and Excel.
+      </p>
 
-  <a href="https://github.com/thirupathichipurla-eng/utility-scale-pv-economic-analysis" target="_blank">
-    View Project →
-  </a>
+      <a href="https://github.com/thirupathichipurla-eng/utility-scale-pv-economic-analysis"
+      target="_blank">
+      View Project →
+      </a>
 
-</div>
+    </div>
 
-<div class="project-card">
+    <div class="project-card">
 
-  <img src="startup-nox-emissions.png"
-  style="width:100%; border-radius:12px; margin-bottom:15px;">
+      <img src="startup-nox-emissions.png">
 
-  <h3>🔥 CHP Efficiency & Emission Analysis</h3>
+      <h3>🔥 CHP Efficiency & Emission Analysis</h3>
 
-  <p>
-    Combined Heat and Power system performance evaluation including electrical efficiency,
-    thermal efficiency, exhaust emissions, and catalytic converter behavior.
-  </p>
+      <p>
+        Combined Heat and Power system performance evaluation including electrical efficiency,
+        thermal efficiency, exhaust emissions, and catalytic converter behavior.
+      </p>
 
-  <a href="https://github.com/thirupathichipurla-eng/chp-efficiency-emission-analysis" target="_blank">
-    View Project →
-  </a>
+      <a href="https://github.com/thirupathichipurla-eng/chp-efficiency-emission-analysis"
+      target="_blank">
+      View Project →
+      </a>
 
-</div>
+    </div>
+
   </div>
+
 </section>
 
 <section id="skills">
+
   <h2>Technical Skills</h2>
 
   <div class="card skills">
+
     <span>Polysun</span>
     <span>OEMOF</span>
     <span>E-Quest</span>
@@ -345,50 +415,84 @@
     <span>Technical Documentation</span>
     <span>Project Coordination</span>
     <span>GitHub</span>
+
   </div>
+
 </section>
 
 <section>
+
   <h2>Education</h2>
 
   <div class="card">
+
     <h3>M.Eng. International Energy Engineering</h3>
+
     <p>OTH Amberg-Weiden, Germany</p>
+
     <p>
       Focus: renewable energy systems, industrial optimization, PV systems,
       energy modelling, sustainability, and technical-economic analysis.
     </p>
+
   </div>
 
   <div class="card">
+
     <h3>B.Eng. Mechanical Engineering</h3>
+
     <p>CMR College of Engineering & Technology, India</p>
+
     <p>
       Focus: mechanical systems, fabrication, solar-powered agricultural machinery,
       energy applications, and engineering design.
     </p>
+
   </div>
+
 </section>
 
 <section id="contact">
+
   <h2>Contact</h2>
 
   <div class="card">
+
     <p><strong>Email:</strong> thirupathi.chipurla@gmail.com</p>
+
     <p><strong>Location:</strong> Amberg, Germany</p>
+
     <p><strong>Languages:</strong> English, German B1, Hindi, Telugu</p>
 
     <div class="buttons">
-      <a href="mailto:thirupathi.chipurla@gmail.com">Email Me</a>
-      <a href="https://www.linkedin.com/in/thirupathireddychipurla/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/thirupathichipurla-eng" target="_blank">GitHub</a>
+
+      <a href="mailto:thirupathi.chipurla@gmail.com">
+      Email Me
+      </a>
+
+      <a href="https://www.linkedin.com/in/thirupathireddychipurla/"
+      target="_blank">
+      LinkedIn
+      </a>
+
+      <a href="https://github.com/thirupathichipurla-eng"
+      target="_blank">
+      GitHub
+      </a>
+
     </div>
+
   </div>
+
 </section>
 
 <footer>
-  <p>© 2026 Thirupathi Reddy Chipurla | Renewable Energy Engineer</p>
+
+  <p>
+    © 2026 Thirupathi Reddy Chipurla | Renewable Energy Engineer
+  </p>
+
 </footer>
 
 </body>
-</html> 
+</html>
