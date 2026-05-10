@@ -1,214 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thirupathi Reddy Chipurla | Energy Engineer</title>
 
-    <title>Thirupathi Chipurla</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0f172a;
-            color: white;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #07111f;
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
 
-        header {
-            text-align: center;
-            padding: 100px 20px;
-        }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(7, 17, 31, 0.95);
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #1e293b;
+    }
 
-        .profile-image {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #38bdf8;
-            margin-bottom: 25px;
-        }
+    nav a {
+      color: #38bdf8;
+      text-decoration: none;
+      margin: 0 14px;
+      font-weight: bold;
+    }
 
-        h1 {
-            font-size: 52px;
-            margin-bottom: 15px;
-        }
+    header {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #020617, #0f172a, #082f49);
+    }
 
-        p {
-            font-size: 20px;
-            color: #cbd5e1;
-        }
+    .hero {
+      max-width: 900px;
+    }
 
-        .buttons {
-            margin-top: 35px;
-        }
+    .profile {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #38bdf8;
+      box-shadow: 0 0 30px rgba(56,189,248,0.5);
+      margin-bottom: 25px;
+    }
 
-        .buttons a {
-            text-decoration: none;
-            background: white;
-            color: black;
-            padding: 14px 28px;
-            margin: 10px;
-            border-radius: 10px;
-            display: inline-block;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+    h1 {
+      font-size: 48px;
+      color: white;
+      margin: 10px 0;
+    }
 
-        .buttons a:hover {
-            background: #38bdf8;
-            color: white;
-        }
+    h2 {
+      color: #38bdf8;
+      font-size: 34px;
+      margin-bottom: 25px;
+    }
 
-        section {
-            padding: 70px 20px;
-            max-width: 950px;
-            margin: auto;
-        }
+    h3 {
+      color: white;
+      margin-top: 0;
+    }
 
-        h2 {
-            color: #38bdf8;
-            font-size: 34px;
-            margin-bottom: 25px;
-        }
+    .tagline {
+      font-size: 22px;
+      color: #cbd5e1;
+    }
 
-        .project {
-            background: #1e293b;
-            padding: 25px;
-            border-radius: 14px;
-            margin-top: 25px;
-        }
+    .buttons {
+      margin-top: 30px;
+    }
 
-        h3 {
-            color: white;
-            margin-top: 0;
-        }
+    .buttons a {
+      display: inline-block;
+      text-decoration: none;
+      background: #38bdf8;
+      color: #020617;
+      padding: 13px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      margin: 8px;
+      transition: 0.3s;
+    }
 
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #94a3b8;
-        }
-    </style>
+    .buttons a:hover {
+      background: white;
+      transform: translateY(-3px);
+    }
+
+    section {
+      max-width: 1150px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .card {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 18px;
+      padding: 25px;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: #38bdf8;
+    }
+
+    .project-card a {
+      color: #38bdf8;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #1e293b;
+      color: #cbd5e1;
+      padding: 10px 15px;
+      border-radius: 20px;
+      margin: 6px;
+      font-size: 15px;
+    }
+
+    .metric {
+      text-align: center;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 18px;
+      padding: 25px;
+    }
+
+    .metric strong {
+      color: #38bdf8;
+      font-size: 30px;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 34px;
+      }
+
+      .tagline {
+        font-size: 18px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-    <img src="Passbild.JPG" alt="Thirupathi Chipurla" class="profile-image">
+<header id="home">
+  <div class="hero">
+    <img src="Passbild.JPG" alt="Thirupathi Reddy Chipurla" class="profile">
 
-    <h1>Hi, I'm Thirupathi 👋</h1>
+    <h1>Thirupathi Reddy Chipurla</h1>
 
-    <p>
-        Renewable Energy Engineer (M.Eng.) passionate about
-        sustainability, energy systems, and industrial optimization.
+    <p class="tagline">
+      Renewable Energy Engineer | Energy Systems & PV Specialist | Industrial Energy Optimization
     </p>
 
     <div class="buttons">
-
-        <a href="https://www.linkedin.com/in/thirupathireddychipurla/" target="_blank">
-            LinkedIn
-        </a>
-
-        <a href="https://github.com/thirupathichipurla-eng" target="_blank">
-            GitHub
-        </a>
-
-        <a href="Thirupathi_Reddy_Chipurla_CV.pdf" target="_blank">
-            Download CV
-        </a>
-
+      <a href="Thirupathi_Reddy_Chipurla_CV.pdf" target="_blank">Download CV</a>
+      <a href="https://github.com/thirupathichipurla-eng" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/thirupathireddychipurla/" target="_blank">LinkedIn</a>
     </div>
-
+  </div>
 </header>
 
-<section>
+<section id="about">
+  <h2>About Me</h2>
 
-    <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I am a Renewable Energy Engineer with a Master of Engineering in International Energy Engineering
+      from OTH Amberg-Weiden, Germany, and a background in Mechanical Engineering.
+    </p>
 
-    <div class="project">
-        <p>
-            I am an International Energy Engineering graduate based in Germany
-            with a background in Mechanical Engineering and strong interest in
-            renewable energy, sustainability, and industrial energy optimization.
-        </p>
-    </div>
+    <p>
+      My work focuses on renewable energy systems, PV simulation, battery integration,
+      industrial energy optimization, electrical power loss analysis, and sustainable energy infrastructure.
+    </p>
 
+    <p>
+      I am currently building a professional engineering portfolio focused on practical energy system
+      projects, industrial decarbonization, and data-supported sustainability solutions.
+    </p>
+  </div>
 </section>
 
 <section>
+  <h2>Engineering Highlights</h2>
 
-    <h2>Projects</h2>
-
-    <div class="project">
-
-        <h3>Industrial Energy Optimization</h3>
-
-        <p>
-            Master thesis focused on optimization of industrial electric heating
-            systems at F.I.C. Germany GmbH. The project involved analysis of
-            transformer and cable configurations to improve energy efficiency
-            and reduce power losses.
-        </p>
-
+  <div class="grid">
+    <div class="metric">
+      <strong>96.5%</strong>
+      System efficiency improvement analysis
     </div>
 
-    <div class="project">
-
-        <h3>Solar Irrigation System</h3>
-
-        <p>
-            Designed and simulated a solar-powered irrigation system using
-            Polysun to improve water efficiency and sustainability.
-        </p>
-
+    <div class="metric">
+      <strong>15–20%</strong>
+      Power loss reduction potential
     </div>
 
+    <div class="metric">
+      <strong>PV</strong>
+      Simulation & economic analysis
+    </div>
+
+    <div class="metric">
+      <strong>B1</strong>
+      German language level
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Featured Projects</h2>
+
+  <div class="grid">
+
+    <div class="project-card">
+      <h3>⚡ Industrial Energy Loss Optimization</h3>
+      <p>
+        Power loss analysis and optimization of electrical heating systems in the glass industry,
+        including transformer efficiency, cable losses, magnetic induction, and cost optimization.
+      </p>
+      <a href="https://github.com/thirupathichipurla-eng/industrial-energy-loss-optimization" target="_blank">
+        View Project →
+      </a>
+    </div>
+
+    <div class="project-card">
+      <h3>☀ Utility-Scale PV Economic Analysis</h3>
+      <p>
+        Photovoltaic system simulation, annual energy yield analysis, NPV/IRR/payback evaluation,
+        and sustainability assessment using Polysun and Excel.
+      </p>
+      <a href="https://github.com/thirupathichipurla-eng/utility-scale-pv-economic-analysis" target="_blank">
+        View Project →
+      </a>
+    </div>
+
+    <div class="project-card">
+      <h3>🔥 CHP Efficiency & Emission Analysis</h3>
+      <p>
+        Combined Heat and Power system performance evaluation including electrical efficiency,
+        thermal efficiency, exhaust emissions, and catalytic converter behavior.
+      </p>
+      <a href="https://github.com/thirupathichipurla-eng/chp-efficiency-emission-analysis" target="_blank">
+        View Project →
+      </a>
+    </div>
+
+    <div class="project-card">
+      <h3>🌱 Solar-Powered Seed Sowing Machine</h3>
+      <p>
+        Mechanical engineering bachelor project integrating solar PV, DC motor control,
+        seed-metering mechanism, and sustainable agricultural design.
+      </p>
+      <a href="https://github.com/thirupathichipurla-eng" target="_blank">
+        Coming Soon →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Technical Skills</h2>
+
+  <div class="card skills">
+    <span>Polysun</span>
+    <span>OEMOF</span>
+    <span>E-Quest</span>
+    <span>Excel</span>
+    <span>Energy System Modelling</span>
+    <span>PV Simulation</span>
+    <span>Battery Storage</span>
+    <span>Industrial Energy Efficiency</span>
+    <span>Electrical Loss Analysis</span>
+    <span>CHP Systems</span>
+    <span>Sustainability Assessment</span>
+    <span>Technical Documentation</span>
+    <span>Project Coordination</span>
+    <span>GitHub</span>
+  </div>
 </section>
 
 <section>
+  <h2>Education</h2>
 
-    <h2>Skills</h2>
+  <div class="card">
+    <h3>M.Eng. International Energy Engineering</h3>
+    <p>OTH Amberg-Weiden, Germany</p>
+    <p>
+      Focus: renewable energy systems, industrial optimization, PV systems,
+      energy modelling, sustainability, and technical-economic analysis.
+    </p>
+  </div>
 
-    <div class="project">
-
-        <p>
-            Python • MATLAB • OEMOF • Polysun • Energy Systems •
-            Sustainability • Thermodynamics • Technical Analysis
-        </p>
-
-    </div>
-
+  <div class="card">
+    <h3>B.Eng. Mechanical Engineering</h3>
+    <p>CMR College of Engineering & Technology, India</p>
+    <p>
+      Focus: mechanical systems, fabrication, solar-powered agricultural machinery,
+      energy applications, and engineering design.
+    </p>
+  </div>
 </section>
 
-<section>
+<section id="contact">
+  <h2>Contact</h2>
 
-    <h2>Contact</h2>
+  <div class="card">
+    <p><strong>Email:</strong> thirupathi.chipurla@gmail.com</p>
+    <p><strong>Location:</strong> Amberg, Germany</p>
+    <p><strong>Languages:</strong> English, German B1, Hindi, Telugu</p>
 
-    <div class="project">
-
-        <p>
-            Email: thirupathi.chipurla@gmail.com
-        </p>
-
-        <p>
-            LinkedIn:
-            https://www.linkedin.com/in/thirupathireddychipurla/
-        </p>
-
+    <div class="buttons">
+      <a href="mailto:thirupathi.chipurla@gmail.com">Email Me</a>
+      <a href="https://www.linkedin.com/in/thirupathireddychipurla/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/thirupathichipurla-eng" target="_blank">GitHub</a>
     </div>
-
+  </div>
 </section>
 
 <footer>
-
-    <p>
-        © 2026 Thirupathi Chipurla | Renewable Energy Engineer
-    </p>
-
+  <p>© 2026 Thirupathi Reddy Chipurla | Renewable Energy Engineer</p>
 </footer>
 
 </body>
-</html>
+</html> 
